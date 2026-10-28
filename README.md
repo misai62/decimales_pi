@@ -21,7 +21,7 @@ Depuis le répertoire du projet, exécutez :
 python3 calcul_pi.py
 ```
 
-Le script crée ou remplace `pi_10000_decimales.txt` dans le même répertoire que le script et affiche un message de confirmation. Le fichier contient une ligne commençant par :
+Le script crée ou remplace `pi_10000_decimales.txt` dans le même répertoire que le script et affiche un message de confirmation. Le fichier commence ainsi (50 décimales par ligne, la première ligne incluant `3.`) :
 
 ```text
 3.14159265358979323846264338327950288419716939937510...

@@ -33,7 +33,13 @@ def calculer_pi(nb_decimales: int) -> str:
 def main() -> None:
     nb_decimales = 10_000
     fichier = Path(__file__).with_name("pi_10000_decimales.txt")
-    fichier.write_text(calculer_pi(nb_decimales) + "\n", encoding="utf-8")
+    pi = calculer_pi(nb_decimales)
+    partie_entiere, decimales = pi.split(".")
+    lignes = [f"{partie_entiere}.{decimales[:50]}"]
+    lignes.extend(
+        decimales[i : i + 50] for i in range(50, len(decimales), 50)
+    )
+    fichier.write_text("\n".join(lignes) + "\n", encoding="utf-8")
     print(f"{nb_decimales} décimales de pi enregistrées dans {fichier.name}")
 
 
